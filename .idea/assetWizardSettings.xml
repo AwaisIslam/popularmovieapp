@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$PROJECT_DIR$/../../Sdk/icons/material/materialicons/arrow_back_ios/baseline_arrow_back_ios_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../../Sdk/icons/material/materialicons/weekend/baseline_weekend_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_back_black" />
+                            <entry key="color" value="62c4f2" />
+                            <entry key="outputName" value="ic_regular" />
                             <entry key="sourceFile" value="E:\TenTwenty\TrailersApp-master" />
                           </map>
                         </option>

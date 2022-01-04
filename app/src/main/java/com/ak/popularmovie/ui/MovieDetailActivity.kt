@@ -109,6 +109,10 @@ class MovieDetailActivity : AppCompatActivity() {
             movieDetailViewModel.openMovieTrailer()
             observeMovieVideo()
         }
+        binding.btnGetTickets.setOnClickListener {
+            val ticketIntent = Intent(this, TicketActivity::class.java)
+            startActivity(ticketIntent)
+        }
     }
 
     private fun showLoading() {

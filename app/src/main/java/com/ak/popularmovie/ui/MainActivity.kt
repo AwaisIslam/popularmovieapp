@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private var movieJob : Job? = null
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main,menu)
         return super.onCreateOptionsMenu(menu)
-    }
+    }*/
 
     @ExperimentalPagingApi
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
         movieAdapter.addLoadStateListener { loadState ->
             binding.rvMovie.isVisible = loadState.source.refresh is LoadState.NotLoading
-            //binding.progressBar.isVisible = loadState.source.refresh is LoadState.Loading
+            binding.progressBar.isVisible = loadState.source.refresh is LoadState.Loading
             binding.btnRetry.isVisible = loadState.source.refresh is LoadState.Error
         }
 
@@ -80,15 +80,15 @@ class MainActivity : AppCompatActivity() {
     @ExperimentalPagingApi
     private fun observeMovieList(movieType: MovieType) {
 
-        supportActionBar?.title = "${movieType.typeName} Movies"
+ //       supportActionBar?.title = "${movieType.typeName} Movies"
 //        binding.toolBar.title = "${movieType.typeName} Movies"
+        supportActionBar?.title = "Watch"
         movieJob?.cancel()
         movieJob = lifecycleScope.launch {
             viewModel.getMoviesByType(movieType).collectLatest {
                 movieAdapter.submitData(it)
             }
         }
-
     }
 
     @ExperimentalPagingApi

@@ -8,9 +8,10 @@
     <color name="teal_700">#FF018786</color>
 
     <color name="white">#fafafa</color>
+    <color name="round_white">#ffffff</color>
     <color name="black">#263238</color>
     <color name="grey_500">#bdbdbd</color>
-    <color name="blue">#1B94F4</color>
+    <color name="blue">#62c4f2</color>
 
 
     <color name="primaryColor">#212121</color>
@@ -24,6 +25,7 @@
 
     <color name="colorSurface">#212121</color>
     <color name="colorOnSurface">#fafafa</color>
+    <color name="text_color">#efeff2</color>
 
 
 </resources>

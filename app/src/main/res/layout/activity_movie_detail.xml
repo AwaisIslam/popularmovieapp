@@ -10,8 +10,9 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -33,10 +34,10 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/tool_bar"
-                style="@style/Widget.App.Toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 android:layout_gravity="top"
+                android:layout_marginTop="32dp"
                 app:layout_collapseMode="pin" />
 
             <RelativeLayout
@@ -63,36 +64,49 @@
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                     tools:text="Movie title" />
 
-                <android.widget.Button
-                    android:id="@+id/btn_get_tickets"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_below="@id/tv_title"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/round_corner_button"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:text="Get Tickets"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:gravity="center">
 
-                <android.widget.Button
-                    android:id="@+id/btn_wathc_trailer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/round_corner_border_button"
-                    android:padding="8dp"
-                    android:layout_below="@id/btn_get_tickets"
-                    android:layout_centerInParent="true"
-                    android:text="Watch Trailer"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:drawableLeft="@drawable/ic_play"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    <android.widget.Button
+                        android:id="@+id/btn_get_tickets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_title"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/round_corner_button"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="Get Tickets"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_wathc_trailer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_get_tickets"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/round_corner_border_button"
+                        android:drawableLeft="@drawable/ic_play"
+                        android:padding="8dp"
+                        android:text="Watch Trailer"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
 
             </RelativeLayout>
 
@@ -222,10 +236,10 @@
                 android:id="@+id/layout_genres"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
                 android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
@@ -238,19 +252,27 @@
                     android:id="@+id/chip_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp">
+                    android:layout_marginTop="16dp">
 
                 </com.google.android.material.chip.ChipGroup>
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#F3F3F3"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                />
+
             <LinearLayout
                 android:id="@+id/layout_overview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="30dp"
                 android:orientation="vertical">
 
@@ -267,7 +289,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-                    tools:text="@string/sample_text" />
+                    tools:text="@string/sample_text"
+                    android:textColor="@color/text_color"/>
 
             </LinearLayout>
 
